@@ -1,0 +1,36 @@
+{
+  "name": "io.devcomp.tool.firefox",
+  "version": "0.0.0",
+  "private": true,
+  "pm": "npm",
+  "main": "lib/firefox.js",
+  "dependencies": {
+	"fs-extra": "~0.8.1",
+    "q": "~1.0.0",
+    "smi.cli": "0.x"
+  },
+  "devDependencies": {
+    "mocha": "~1.9.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter list test/*.js",
+    "install": "./node_modules/.bin/smi install"
+  },
+  "upstream": {
+    "packages": {
+      "top": [
+        "../../*",
+        "../../../../*"
+      ]
+    }
+  },
+  "config": {
+    "smi.cli": {
+      "packagesDirectory": "node_modules"
+    },
+    "pio.deploy.converter": {
+      "scriptsPath": null,
+  	  "sourcePath": "."
+    }    
+  }
+}
